@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Changes to Meteor are not documented here, only Asteroid specific changes.
 
+## [0.4.1] - 2026-10-06
+Rebased to Meteor Client 26.2, Build #32.
+
+### Fixed
+- Issues with vanilla font rendering are now resolved, hence the full release.
+
 ## [0.4.1-alpha-3] - 2026-08-24
 ### Added
 - Command Output Copyable toggle to Better Chat
