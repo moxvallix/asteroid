@@ -17,7 +17,7 @@ import meteordevelopment.orbit.EventHandler;
 import meteordevelopment.orbit.EventPriority;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.protocol.game.ServerboundSwingPacket;
+import net.minecraft.network.protocol.game.ServerboundPunchPacket;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -135,8 +135,8 @@ public class BlockUtils {
         InteractionResult result = mc.gameMode.useItemOn(mc.player, hand, blockHitResult);
 
         if (result.consumesAction()) {
-            if (swing) mc.player.swing(hand);
-            else mc.getConnection().send(new ServerboundSwingPacket(hand));
+            if (swing) mc.player.swing(hand, mc.player.getItemInHand(hand).getInteractAnimation(), false);
+            else mc.getConnection().send(new ServerboundPunchPacket());
         }
 
         mc.player.setShiftKeyDown(wasSneaking);
@@ -238,14 +238,14 @@ public class BlockUtils {
         if (!canBreak(blockPos, mc.level.getBlockState(blockPos))) return false;
 
         // Creating new instance of block pos because minecraft assigns the parameter to a field, and we don't want it to change when it has been stored in a field somewhere
-        BlockPos pos = blockPos instanceof BlockPos.MutableBlockPos ? new BlockPos(blockPos) : blockPos;
+        BlockPos pos = blockPos instanceof BlockPos.MutableBlockPos ? blockPos.immutable() : blockPos;
 
         if (mc.gameMode.isDestroying())
             mc.gameMode.continueDestroyBlock(pos, getDirection(blockPos));
         else mc.gameMode.startDestroyBlock(pos, getDirection(blockPos));
 
-        if (swing) mc.player.swing(InteractionHand.MAIN_HAND);
-        else mc.getConnection().send(new ServerboundSwingPacket(InteractionHand.MAIN_HAND));
+        if (swing) mc.player.swing(InteractionHand.MAIN_HAND, mc.player.getMainHandItem().getAttackAnimation(), false);
+        else mc.getConnection().send(new ServerboundPunchPacket());
 
         breaking = true;
         breakingThisTick = true;

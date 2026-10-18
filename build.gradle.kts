@@ -82,8 +82,7 @@ dependencies {
     compileOnly(libs.sodium) { isTransitive = false }
     compileOnly(libs.lithium) { isTransitive = false }
     compileOnly(libs.iris) { isTransitive = false }
-    compileOnly(libs.viafabricplus) { isTransitive = false }
-    compileOnly(libs.viafabricplus.api) { isTransitive = false }
+
     compileOnly(libs.modmenu)
 
     // Libraries (JAR-in-JAR)
@@ -195,9 +194,10 @@ tasks {
 
     jar {
         inputs.property("archivesName", archivesBaseName)
+        val licenseName = "LICENSE_$archivesBaseName"
 
         from("LICENSE") {
-            rename { "${it}_$archivesBaseName" }
+            rename("LICENSE", licenseName)
         }
 
         // Include launcher classes
