@@ -6,6 +6,7 @@
 package meteordevelopment.meteorclient.systems.modules.render;
 
 
+import com.mojang.blaze3d.platform.InputConstants;
 import meteordevelopment.meteorclient.events.game.GameLeftEvent;
 import meteordevelopment.meteorclient.events.game.OpenScreenEvent;
 import meteordevelopment.meteorclient.events.meteor.KeyInputEvent;
@@ -21,6 +22,7 @@ import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.Utils;
+import meteordevelopment.meteorclient.utils.misc.Keybind;
 import meteordevelopment.meteorclient.utils.misc.input.Input;
 import meteordevelopment.meteorclient.utils.misc.input.KeyAction;
 import meteordevelopment.meteorclient.utils.player.Rotations;
@@ -44,7 +46,6 @@ import static com.mojang.blaze3d.platform.InputConstants.KEY_F3;
 
 public class Freecam extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
-    private final SettingGroup sgPathing = settings.createGroup("Pathing");
 
     private final Setting<Double> speed = sgGeneral.add(new DoubleSetting.Builder()
         .name("speed")
@@ -136,6 +137,7 @@ public class Freecam extends Module {
 
     public Freecam() {
         super(Categories.Render, "freecam", "Allows the camera to move away from the player.");
+        keybind.set(Keybind.fromKey(InputConstants.KEY_F4));
     }
 
     @Override
@@ -287,6 +289,7 @@ public class Freecam extends Module {
     @EventHandler(priority = EventPriority.HIGH)
     public void onKey(KeyInputEvent event) {
         if (Input.isKeyPressed(KEY_F3)) return;
+        if (checkGuiMove()) return;
 
         if (onInput(event.key(), event.action)) event.cancel();
     }
@@ -328,6 +331,8 @@ public class Freecam extends Module {
 
     @EventHandler(priority = EventPriority.HIGH)
     private void onMouseClick(MouseClickEvent event) {
+        if (checkGuiMove()) return;
+
         if (onInput(event.button(), event.action)) event.cancel();
     }
 
@@ -398,6 +403,10 @@ public class Freecam extends Module {
                 info("Toggled off because you changed dimensions.");
             }
         }
+    }
+
+    private boolean checkGuiMove() {
+        return mc.gui.screen() != null;
     }
 
     public void changeLookDirection(double deltaX, double deltaY) {
