@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Changes to Meteor are not documented here, only Asteroid specific changes.
 
+## [0.4.2] - 2026-10-18
+Rebased to Meteor Client 26.3, Build #10
+
+### Changed
+- Minecraft is now at 26.3
+- Freecam is now bound to F4 by default.
+
+### Fixed
+- Freecam no longer moves about when keys are pressed and a GUI is open.
+- Fixed another vanilla font rendering issue, this time with dropdown menus.
+
 ## [0.4.1] - 2026-10-06
 Rebased to Meteor Client 26.2, Build #32.
 
