@@ -9,6 +9,8 @@ import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
 import meteordevelopment.meteorclient.gui.themes.meteor.MeteorGuiTheme;
 import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
 import meteordevelopment.meteorclient.gui.widgets.input.WDropdown;
+import meteordevelopment.meteorclient.renderer.text.TextRenderer;
+import meteordevelopment.meteorclient.renderer.text.VanillaTextRenderer;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 
 public class WMeteorDropdown<T> extends WDropdown<T> implements MeteorWidget {
@@ -72,7 +74,11 @@ public class WMeteorDropdown<T> extends WDropdown<T> implements MeteorWidget {
             color.a += color.a / 2;
             color.validate();
 
-            renderer.quad(this, color);
+            if (TextRenderer.get() == VanillaTextRenderer.INSTANCE) {
+                renderer.fill(this, color);
+            } else {
+                renderer.quad(this, color);
+            }
 
             color.a = preA;
 
