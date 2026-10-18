@@ -6,8 +6,8 @@
 package meteordevelopment.meteorclient.events.game;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
 
 import java.util.List;
 

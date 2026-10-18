@@ -8,7 +8,6 @@ package meteordevelopment.meteorclient.utils.entity.simulator;
 import meteordevelopment.meteorclient.mixin.CrossbowItemAccessor;
 import meteordevelopment.meteorclient.mixin.ProjectileInGroundAccessor;
 import meteordevelopment.meteorclient.mixininterface.IVec3;
-import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.utils.Utils;
 import meteordevelopment.meteorclient.utils.player.Rotations;
 import net.minecraft.core.BlockPos;

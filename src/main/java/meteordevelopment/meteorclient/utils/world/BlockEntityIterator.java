@@ -6,8 +6,8 @@
 package meteordevelopment.meteorclient.utils.world;
 
 import meteordevelopment.meteorclient.mixin.ChunkAccessAccessor;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.chunk.ChunkAccess;
 
 import java.util.Iterator;

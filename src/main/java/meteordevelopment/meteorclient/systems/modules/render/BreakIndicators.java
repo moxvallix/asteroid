@@ -8,7 +8,10 @@ package meteordevelopment.meteorclient.systems.modules.render;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.mixin.MultiPlayerGameModeAccessor;
 import meteordevelopment.meteorclient.renderer.ShapeMode;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.meteorclient.settings.ColorSetting;
+import meteordevelopment.meteorclient.settings.EnumSetting;
+import meteordevelopment.meteorclient.settings.Setting;
+import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.render.color.Color;
@@ -20,7 +23,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import java.util.List;
 import java.util.SortedSet;
 
 public class BreakIndicators extends Module {

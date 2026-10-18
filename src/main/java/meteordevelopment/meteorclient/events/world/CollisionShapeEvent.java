@@ -7,8 +7,8 @@ package meteordevelopment.meteorclient.events.world;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import meteordevelopment.meteorclient.events.Cancellable;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class CollisionShapeEvent extends Cancellable {

@@ -5,9 +5,9 @@
 
 package meteordevelopment.meteorclient.events.render;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import meteordevelopment.meteorclient.renderer.Renderer3D;
 import meteordevelopment.meteorclient.utils.Utils;
-import com.mojang.blaze3d.vertex.PoseStack;
 
 public class Render3DEvent {
     private static final Render3DEvent INSTANCE = new Render3DEvent();

@@ -26,7 +26,6 @@ import meteordevelopment.meteorclient.utils.misc.input.KeyAction;
 import meteordevelopment.meteorclient.utils.player.Rotations;
 import meteordevelopment.orbit.EventHandler;
 import meteordevelopment.orbit.EventPriority;
-import net.minecraft.client.Camera;
 import net.minecraft.client.CameraType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.game.ClientboundPlayerCombatKillPacket;

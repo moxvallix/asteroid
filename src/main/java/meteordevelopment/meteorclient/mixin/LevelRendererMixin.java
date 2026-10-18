@@ -9,7 +9,6 @@ import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.mojang.blaze3d.pipeline.RenderTarget;
 import com.mojang.blaze3d.resource.ResourceHandle;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.renderpearl.api.buffers.GpuBufferSlice;
 import it.unimi.dsi.fastutil.Stack;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import meteordevelopment.meteorclient.mixininterface.IEntityRenderState;

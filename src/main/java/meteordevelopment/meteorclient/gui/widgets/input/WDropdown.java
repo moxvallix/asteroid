@@ -11,9 +11,9 @@ import meteordevelopment.meteorclient.gui.widgets.WRoot;
 import meteordevelopment.meteorclient.gui.widgets.containers.WVerticalList;
 import meteordevelopment.meteorclient.gui.widgets.containers.WView;
 import meteordevelopment.meteorclient.gui.widgets.pressable.WPressable;
-import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.client.input.CharacterEvent;
 import net.minecraft.client.input.KeyEvent;
+import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.util.Mth;
 
 import static meteordevelopment.meteorclient.utils.Utils.getWindowHeight;

@@ -22,8 +22,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.MapItem;
 import net.minecraft.world.level.saveddata.maps.MapId;
 import net.minecraft.world.level.saveddata.maps.MapItemSavedData;
-import org.jspecify.annotations.Nullable;
 import org.joml.Matrix3x2fStack;
+import org.jspecify.annotations.Nullable;
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
 

@@ -15,16 +15,13 @@ import meteordevelopment.meteorclient.utils.Utils;
 import meteordevelopment.meteorclient.utils.misc.text.MeteorClickEvent;
 import meteordevelopment.meteorclient.utils.misc.text.RunnableClickEvent;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.screens.ChatScreen;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.input.KeyEvent;
 import net.minecraft.network.chat.ClickEvent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import static com.mojang.blaze3d.platform.InputConstants.*;
 

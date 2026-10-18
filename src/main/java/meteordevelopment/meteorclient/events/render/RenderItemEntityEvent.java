@@ -5,12 +5,12 @@
 
 package meteordevelopment.meteorclient.events.render;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import meteordevelopment.meteorclient.events.Cancellable;
 import meteordevelopment.meteorclient.mixininterface.IEntityRenderState;
-import net.minecraft.client.renderer.item.ItemModelResolver;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.state.ItemEntityRenderState;
-import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.renderer.item.ItemModelResolver;
 import net.minecraft.world.entity.item.ItemEntity;
 import org.jspecify.annotations.Nullable;
 

@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.events.world;
 
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class BlockUpdateEvent {
     private static final BlockUpdateEvent INSTANCE = new BlockUpdateEvent();

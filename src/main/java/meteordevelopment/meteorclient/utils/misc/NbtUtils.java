@@ -9,9 +9,9 @@ import it.unimi.dsi.fastutil.io.FastByteArrayInputStream;
 import it.unimi.dsi.fastutil.io.FastByteArrayOutputStream;
 import meteordevelopment.meteorclient.MeteorClient;
 import net.minecraft.nbt.*;
+import org.jspecify.annotations.Nullable;
 
 import java.util.*;
-import org.jspecify.annotations.Nullable;
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
 

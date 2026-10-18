@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.settings;
 
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 
 import java.util.List;
 import java.util.function.Consumer;

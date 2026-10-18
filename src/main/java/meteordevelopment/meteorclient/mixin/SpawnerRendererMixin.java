@@ -7,10 +7,10 @@ package meteordevelopment.meteorclient.mixin;
 
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.render.NoRender;
-import net.minecraft.world.level.block.entity.SpawnerBlockEntity;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.SpawnerRenderer;
 import net.minecraft.client.renderer.blockentity.state.SpawnerRenderState;
+import net.minecraft.world.level.block.entity.SpawnerBlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

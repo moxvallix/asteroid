@@ -16,8 +16,8 @@ import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;
-import net.minecraft.client.multiplayer.resolver.ServerAddress;
 import net.minecraft.client.multiplayer.ServerData;
+import net.minecraft.client.multiplayer.resolver.ServerAddress;
 
 public class AutoReconnect extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();

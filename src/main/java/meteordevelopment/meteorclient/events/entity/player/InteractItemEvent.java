@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.events.entity.player;
 
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 
 public class InteractItemEvent {
     private static final InteractItemEvent INSTANCE = new InteractItemEvent();

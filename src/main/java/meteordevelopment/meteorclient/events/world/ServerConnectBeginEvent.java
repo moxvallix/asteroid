@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.events.world;
 
-import net.minecraft.client.multiplayer.resolver.ServerAddress;
 import net.minecraft.client.multiplayer.ServerData;
+import net.minecraft.client.multiplayer.resolver.ServerAddress;
 
 public class ServerConnectBeginEvent {
     private static final ServerConnectBeginEvent INSTANCE = new ServerConnectBeginEvent();

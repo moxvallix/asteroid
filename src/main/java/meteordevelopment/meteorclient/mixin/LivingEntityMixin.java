@@ -5,7 +5,6 @@
 
 package meteordevelopment.meteorclient.mixin;
 
-import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.events.entity.DropItemsEvent;

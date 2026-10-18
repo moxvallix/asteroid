@@ -6,26 +6,13 @@
 package meteordevelopment.meteorclient.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
-import com.mojang.blaze3d.vertex.PoseStack;
-import meteordevelopment.meteorclient.mixininterface.IEntityRenderState;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.render.Freecam;
-import meteordevelopment.meteorclient.systems.modules.render.NoRender;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
 import net.minecraft.client.model.EntityModel;
-import net.minecraft.client.model.Model;
-import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
-import net.minecraft.client.renderer.rendertype.RenderType;
-import net.minecraft.client.renderer.rendertype.RenderTypes;
-import net.minecraft.client.renderer.state.level.CameraRenderState;
-import net.minecraft.client.renderer.texture.UvMapping;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.scores.PlayerTeam;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
